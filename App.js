@@ -1,20 +1,22 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 
- /*const heading = React.createElement("h1", 
- {id: "heading", xyz = "abc"},
- "Hello world1");
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "I'm an h1 tag"),
+    React.createElement("h2", {}, "I'm an h2 tag"),
+    React.createElement("h1", {}, "This is Namaste React 🚀🚀"),
+    React.createElement("h2", {}, "by Rahul Singh"),
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "I'm an h1 tag"),
+    React.createElement("h2", {}, "I'm an h2 tag"),
+  ]),
+]);
 
- console.log(heading);
- */
+//JSX
 
+console.log(parent); // object
 
-const parent = React.createElement("div",
-  {id = "parent"},
-   React.createElement("div", {id = "child"}, 
-   [React.createElement("h1", {}, "I am h1 tag"),
-   React.createElement("h2", {}, "I am h2 tag")]
-   ) )
-
-const root = ReactDom.createRoot(document.getElementById("root"));
-
- root.render(parent);
- 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
